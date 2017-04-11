@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "A3B043F5B16BEBE83CD1B5A7E25F4E0E09182AB9",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "9A6BB47668FC2B97032F5E5A1EB31B646C0DC7C1" : 9223372036854775807,
+    "A3B043F5B16BEBE83CD1B5A7E25F4E0E09182AB9" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C580FC23-9BA2-45CA-911E-1963F3BC93CD",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "9A6BB47668FC2B97032F5E5A1EB31B646C0DC7C1" : "..",
+    "A3B043F5B16BEBE83CD1B5A7E25F4E0E09182AB9" : "babywearing-how-tos\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Babywearing",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Babywearing.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:learn-co-students\/ios-0916-certs.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9A6BB47668FC2B97032F5E5A1EB31B646C0DC7C1"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:jhantelleb\/babywearing-how-tos.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A3B043F5B16BEBE83CD1B5A7E25F4E0E09182AB9"
+    }
+  ]
+}

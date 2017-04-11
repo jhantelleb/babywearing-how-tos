@@ -7,40 +7,33 @@
 //
 
 import Foundation
-
-struct MainMenu {
-    var name = "Main Menu"
-    var menuItem = [MenuItem]()
-    
-    init() {
-        let menuItem = MenuItem(type: .What)
-        self.menuItem.append(menuItem)
-    }
-}
-
-
-enum MenuItemType {
-    case What
-    case Benefits
-    case Science
-    case OptimalPosition
-    case SafetyReminders
-    case TypesOfCarrier
-    case Faq
-    case Infographics
-}
-
+import UIKit
 
 struct MenuItem {
-    var contents = [Content]()
-    var type: MenuItemType
+    var bgColor = UIColor(red:0.05, green:0.10, blue:0.35, alpha:1.0)
+    var description: String = ""
     
-    init(type: MenuItemType) {
-        self.type = type
+    init(description: String) {
+        self.description = description
     }
 }
 
-struct Content {
-    var bgImageLink: String
-    var description: String
+
+struct Menu {
+    var menuItems: [MenuItem] = []
+    
+    mutating func generateMenuItems(menuItem: MenuItem) {
+        self.menuItems.append(menuItem)
+    }
+    
+    
+    //Test
+    mutating func generateMenuData() {
+        generateMenuItems(menuItem: MenuItem(description: "What is Babywearing?"))
+        generateMenuItems(menuItem: MenuItem(description: "Benefits of Babywearing"))
+        generateMenuItems(menuItem: MenuItem(description: "Recommended Carrier for your Little One"))
+    }
+    
+    
+    
 }
