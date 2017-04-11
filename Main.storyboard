@@ -45,11 +45,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="mainMenuCell" id="AdN-tD-Z7Q">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="mainMenuCell" id="AdN-tD-Z7Q">
                                 <rect key="frame" x="0.0" y="28" width="305" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AdN-tD-Z7Q" id="KWJ-zO-Zwm">
-                                    <rect key="frame" x="0.0" y="0.0" width="305" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="272" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -59,6 +59,9 @@
                             <outlet property="delegate" destination="93z-No-w2n" id="YK1-qy-oGH"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="tableview" destination="uBg-sp-Qzz" id="CTv-qc-fnw"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gOV-CQ-VRL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

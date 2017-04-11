@@ -13,10 +13,13 @@ class MainMenuTableViewController: UITableViewController {
     
     var menu: Menu = Menu()
     
+    @IBOutlet var tableview: UITableView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         menu.generateMenuData()
+        tableView.layer.borderWidth = 3.0 //Test only, transfer this to the View model!
         
     }
         
