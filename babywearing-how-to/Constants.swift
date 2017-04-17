@@ -10,4 +10,17 @@ import Foundation
 
 struct Constants {
     static let mainMenuCell = "mainMenuCell"
+    
+    //Segues
+    static let whatIsBWSegue = "whatIsSegue"
+    static let benefitsOfBWSegue = "benefitsSegue"
+    static let recommendedCarrierSegue = "recommendedSegue"
+    static let usingACarrierSegue = "usingSegue"
+    
+    
+    //Menu Descriptions
+    static let whatIsBWDesc = "What is Baabywearing?"
+    static let benefitsOfBWDesc = "Benefits of Babywearing"
+    static let recommendedDesc = "Recommended Carriers for your Baby"
+    static let usingACarrierDesc = "Using a Carrier"
 }

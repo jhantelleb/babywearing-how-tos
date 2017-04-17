@@ -12,8 +12,9 @@ struct MainMenuViewModel {
     
     var menuItems = [MenuItem]()
     
-    init(menuItems: [MenuItem]) {
-        self.menuItems = menuItems
-    }
-            
+//    init(menuType: MenuType) {
+//        self.menuType = menuType
+//    }
+    
+    
 }

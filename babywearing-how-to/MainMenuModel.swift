@@ -9,6 +9,26 @@
 import Foundation
 import UIKit
 
+enum MenuType {
+    case whatIsBW
+    case benefitsOfBW
+    case recommendedCarrier
+    case usingACarrier
+    
+    static var description =
+        [ whatIsBW: Constants.whatIsBWDesc,
+          benefitsOfBW: Constants.benefitsOfBWDesc,
+          recommendedCarrier: Constants.recommendedDesc,
+          usingACarrier: Constants.usingACarrierDesc ]
+    
+    static let segue =
+        [ whatIsBW: Constants.whatIsBWSegue,
+          benefitsOfBW: Constants.benefitsOfBWSegue,
+          recommendedCarrier: Constants.recommendedCarrierSegue,
+          usingACarrier: Constants.usingACarrierSegue ]
+    
+}
+
 struct MenuItem {
     var bgColor = UIColor(red:0.05, green:0.10, blue:0.35, alpha:1.0)
     var description: String = ""
@@ -21,19 +41,14 @@ struct MenuItem {
 
 struct Menu {
     var menuItems: [MenuItem] = []
+    var menuType: MenuType
     
-    mutating func generateMenuItems(menuItem: MenuItem) {
-        self.menuItems.append(menuItem)
+    init(menuType: MenuType) {
+        self.menuType = menuType
     }
-    
-    
-    //Test
-    mutating func generateMenuData() {
-        generateMenuItems(menuItem: MenuItem(description: "What is Babywearing?"))
-        generateMenuItems(menuItem: MenuItem(description: "Benefits of Babywearing"))
-        generateMenuItems(menuItem: MenuItem(description: "Recommended Carrier for your Little One"))
-    }
-    
-    
-    
 }
+
+
+
+
+
