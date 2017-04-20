@@ -10,17 +10,15 @@ import UIKit
 
 class MainMenuTableViewController: UITableViewController {
 
-    
-    var menu: Menu = Menu()
+    var menuViewModel: MainMenuViewModel!
     
     @IBOutlet var tableview: UITableView!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        menu.generateMenuData()
+        menuViewModel = MainMenuViewModel()
+        menuViewModel.createMenuItems()
         tableView.layer.borderWidth = 3.0 //Test only, transfer this to the View model!
-        
     }
         
     override func didReceiveMemoryWarning() {
@@ -35,13 +33,13 @@ class MainMenuTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return menu.menuItems.count
+        return menuViewModel.menuItems.count
     }
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.mainMenuCell, for: indexPath)
-        cell.textLabel?.text = menu.menuItems[indexPath.row].description
+        cell.textLabel?.text = menuViewModel.menuItems[indexPath.row].description
         return cell
     }
 }

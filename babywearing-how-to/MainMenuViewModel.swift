@@ -11,10 +11,20 @@ import Foundation
 struct MainMenuViewModel {
     
     var menuItems = [MenuItem]()
+    var menu: Menu
     
-//    init(menuType: MenuType) {
-//        self.menuType = menuType
-//    }
+    init() {
+        self.menuItems = []
+        self.menu = Menu(menuItems: [])
+    }
     
+    mutating func createMenuItems() {
+        menuItems.append(MenuItem(menuType: .whatIsBW))
+        menuItems.append(MenuItem(menuType: .benefitsOfBW))
+        menuItems.append(MenuItem(menuType: .recommendedCarrier))
+        menuItems.append(MenuItem(menuType: .usingACarrier))
+        
+        self.menu = Menu(menuItems: menuItems)
+    }
     
 }

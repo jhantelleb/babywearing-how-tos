@@ -14,38 +14,53 @@ enum MenuType {
     case benefitsOfBW
     case recommendedCarrier
     case usingACarrier
-    
-    static var description =
-        [ whatIsBW: Constants.whatIsBWDesc,
-          benefitsOfBW: Constants.benefitsOfBWDesc,
-          recommendedCarrier: Constants.recommendedDesc,
-          usingACarrier: Constants.usingACarrierDesc ]
-    
-    static let segue =
-        [ whatIsBW: Constants.whatIsBWSegue,
-          benefitsOfBW: Constants.benefitsOfBWSegue,
-          recommendedCarrier: Constants.recommendedCarrierSegue,
-          usingACarrier: Constants.usingACarrierSegue ]
-    
 }
 
 struct MenuItem {
-    var bgColor = UIColor(red:0.05, green:0.10, blue:0.35, alpha:1.0)
-    var description: String = ""
-    
-    init(description: String) {
-        self.description = description
-    }
-}
 
-
-struct Menu {
-    var menuItems: [MenuItem] = []
     var menuType: MenuType
     
     init(menuType: MenuType) {
         self.menuType = menuType
     }
+    
+    var description: String {
+        switch self.menuType {
+        case .whatIsBW:
+            return Constants.whatIsBWDesc
+        case .benefitsOfBW:
+            return Constants.benefitsOfBWDesc
+        case .recommendedCarrier:
+            return Constants.recommendedDesc
+        case .usingACarrier:
+            return Constants.usingACarrierDesc
+        }
+    }
+    
+    var segue: String {
+        switch self.menuType {
+        case .whatIsBW:
+            return Constants.whatIsBWSegue
+        case .benefitsOfBW:
+            return Constants.benefitsOfBWSegue
+        case .recommendedCarrier:
+            return Constants.recommendedCarrierSegue
+        case .usingACarrier:
+            return Constants.usingACarrierSegue
+        }
+    }
+}
+
+
+struct Menu {
+    
+    var bgColor = Constants.menuBGColor
+    var menuItems: [MenuItem] = []
+    
+    init(menuItems: [MenuItem]) {
+        self.menuItems = menuItems
+    }
+    
 }
 
 
